@@ -17,7 +17,7 @@
 body {
 	font-family: 'Roboto', sans-serif;
 	font-size: 16px;
-	background: var(--light-color);
+	background: black;
 	margin: 20px;
 }
 
@@ -31,13 +31,17 @@ a {
 
 .btn {
 	cursor: pointer;
-	padding: 5px 15px;
-	background: var(--light-color);
-	color: var(--dark-color-a);
+	padding: 8px 15px;
+	background: white;
+	color: black;
 	border: 0;
 	font-size: 17px;
+	border-radius: 20px;
 }
 
+.logo{
+	width: 100px;
+}
 
 .chat-container {
 	max-width: 1100px;
@@ -47,7 +51,7 @@ a {
 }
 
 .chat-header {
-	background: var(--dark-color-a);
+	background: rgb(134, 4, 194);
 	color: #fff;
 	border-top-left-radius: 5px;
 	border-top-right-radius: 5px;
@@ -63,7 +67,7 @@ a {
 }
 
 .chat-sidebar {
-	background: var(--dark-color-b);
+	background: rgb(134, 4, 194);
 	color: #fff;
 	padding: 20px 20px 60px;
 	overflow-y: scroll;
@@ -112,7 +116,7 @@ a {
 
 .chat-form-container {
 	padding: 20px 30px;
-	background-color: var(--dark-color-a);
+	background-color: rgb(134, 4, 194);
 }
 
 .chat-form-container form {
@@ -135,14 +139,19 @@ a {
 .join-header {
 	text-align: center;
 	padding: 20px;
-	background: var(--dark-color-a);
+	background: rgb(134, 4, 194);
 	border-top-left-radius: 5px;
 	border-top-right-radius: 5px;
 }
 
+.text {
+	font-size: 20px;
+	font-weight: bold;
+}
+
 .join-main {
 	padding: 30px 40px;
-	background: var(--dark-color-b);
+	background: rgb(134, 4, 194);
 }
 
 .join-main p {

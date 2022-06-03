@@ -16,7 +16,7 @@ const io = socketio(server);
 
 app.use(express.static(path.join(__dirname, 'public')));
 
-const botName = 'ChatCord Bot';
+const botName = 'Chat Bot';
 
 io.on('connection', socket => {
   socket.on('joinRoom', ({ username, room }) => {
@@ -24,13 +24,13 @@ io.on('connection', socket => {
 
     socket.join(user.room);
 
-    socket.emit('message', formatMessage(botName, 'Welcome to ChatCord!'));
+    socket.emit('message', formatMessage(botName, 'Bienvenido ChatAnime!'));
 
     socket.broadcast
       .to(user.room)
       .emit(
         'message',
-        formatMessage(botName, `${user.username} has joined the chat`)
+        formatMessage(botName, `${user.username} se ha unido al chat`)
       );
 
     io.to(user.room).emit('roomUsers', {
@@ -51,7 +51,7 @@ io.on('connection', socket => {
     if (user) {
       io.to(user.room).emit(
         'message',
-        formatMessage(botName, `${user.username} has left the chat`)
+        formatMessage(botName, `${user.username} ha salido del chat`)
       );
 
       io.to(user.room).emit('roomUsers', {
